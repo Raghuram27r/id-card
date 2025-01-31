@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee ID Card</title>
+  </head>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      margin-top: 20px;
+      background-color: wheat;
+    }
+    .id-card {
+      width: 200px;
+      height: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      border: 2px solid red;
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 5px 5px 10px;
+      background-color: gray;
+      display: none;
+    }
+    .id-card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: wheat;
+    }
+    .id-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px 0;
+      border: 2px solid red;
+    }
+    .id-card .details {
+      text-align: left;
+      margin-top: 10px;
+    }
+    .id-card .details p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: wheat;
+    }
+    .input-container {
+      margin-top: 20px;
+    }
+    .input-container input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 200px;
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <div class="input-container">
+      <button id="but" onclick="showIdCard()">Show ID Card</button>
+    </div>
+
+    <div class="id-card" id="idcard">
+      <h2>EMPLOYEE ID CARD</h2>
+      <img
+        id="photo"
+        src="https://i.pinimg.com/736x/fa/d5/e7/fad5e79954583ad50ccb3f16ee64f66d.jpg"
+        alt="profile"
+      />
+      <div class="details">
+        <p><b>Name: </b><span id="name"></span>Raghu</p>
+        <p><b>Blood Group: </b><span id="bloodgroup">B+</span></p>
+        <p><b>ID: </b><span id="id"></span>Raghu-27r</p>
+        <p><b>Position: </b><span id="position">Fullstack Developer</span></p>
+      </div>
+    </div>
+
+    <script>
+      let button = document.getElementById("but");
+      button.addEventListener(
+        "click",
+          function showIdCard() {
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("bloodgroup").value = bloodgroup;
+            document.getElementById("id").value = id;
+            document.getElementById("position").value = position;
+            document.getElementById("idcard").style.display = "block";
+          }
+      );
+    </script>
+  </body>
+</html>
